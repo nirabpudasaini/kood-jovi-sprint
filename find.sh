@@ -1,2 +1,2 @@
 #!/bin/bash
-find . \.\/(^a|z?|(^z&a?))
+find ./ -name "a*" -o -name "*z" -o -name "z*a"
