@@ -1,1 +1,1 @@
-ls -tmFA
+ls --sort=time -mFR
