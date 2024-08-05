@@ -1,1 +1,1 @@
-ls --sort=time -mFR
+ls -mFR --sort=time --time=atime
