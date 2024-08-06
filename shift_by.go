@@ -1,5 +1,9 @@
 package sprint
 
 func ShiftBy(r rune, step int) rune {
-	return rune(int(r) + step)
+	shifted := rune(int(r) + step)
+	for shifted > 122 {
+		shifted = 97 + (shifted - 122)
+	}
+	return shifted
 }
