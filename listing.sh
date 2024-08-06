@@ -1,1 +1,1 @@
-ls -mFR --sort=time --time=atime
+ls -m --sort=time --classify
