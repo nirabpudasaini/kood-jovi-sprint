@@ -1,11 +1,9 @@
 package sprint
 
-import "fmt"
-
 func Countdown(n int) string {
 	result := ""
 	for n > 0 {
-		result += fmt.Sprintf("%d,", n)
+		result += string(rune(n) + rune('0'))
 		n -= 2
 
 	}
