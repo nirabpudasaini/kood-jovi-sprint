@@ -21,7 +21,7 @@ func Combinations() string {
 				result += fmt.Sprintf("%v", numberString)
 				continue
 			}
-			result += fmt.Sprintf("%v,", numberString)
+			result += fmt.Sprintf("%v, ", numberString)
 		}
 
 	}
