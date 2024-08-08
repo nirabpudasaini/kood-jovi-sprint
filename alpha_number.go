@@ -6,9 +6,11 @@ func AlphaNumber(n int) string {
 	if n < 0 {
 		negative = true
 		n = n * -1
+	} else if n == 0 {
+		result = "a"
 	}
-	for n > 1 {
-		result = string(rune(n%10+95)) + result
+	for n >= 1 {
+		result = string(rune(n%10+97)) + result
 		n /= 10
 	}
 	if negative {
