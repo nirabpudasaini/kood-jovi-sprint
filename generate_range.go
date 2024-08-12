@@ -1,7 +1,7 @@
 package sprint
 
 func GenerateRange(min, max int) []int {
-	results := []int{}
+	results := make([]int, 0)
 	for min < max {
 		results = append(results, min)
 		min++
