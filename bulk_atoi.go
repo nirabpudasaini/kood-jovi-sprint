@@ -10,6 +10,9 @@ func BulkAtoi(arr []string) []int {
 
 func strToInt(s string) int {
 	negative := false
+	if s == "" {
+		return 0
+	}
 	if s[0] == '-' {
 		negative = true
 		s = s[1:]
