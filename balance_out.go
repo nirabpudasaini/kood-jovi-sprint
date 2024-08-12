@@ -12,12 +12,11 @@ func BalanceOut(arr []bool) []bool {
 	if count == 0 {
 		return arr
 	} else if count > 0 {
-		for i := 0; i <= count; i++ {
+		for i := 0; i < count; i++ {
 			arr = append(arr, false)
 		}
 	} else {
-		count = count * -1
-		for i := 0; i < count; i++ {
+		for i := 0; i > count; i-- {
 			arr = append(arr, true)
 		}
 	}
