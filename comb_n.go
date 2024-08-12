@@ -5,12 +5,17 @@ import "fmt"
 func CombN(n int) []string {
 	result := []string{}
 	maxValue := 1
+	minValue := 0
 	for i := 1; i <= n; i++ {
 		maxValue = maxValue * 10
+		if i >= 1 {
+			minValue = minValue*10 + i
+		}
 	}
 	maxValue -= 1
+	minValue = minValue / 10
 	isAscendingDigits := true
-	for i := 0; i <= maxValue; i++ {
+	for i := minValue; i <= maxValue; i++ {
 		if i > 123456789 {
 			break
 		}
