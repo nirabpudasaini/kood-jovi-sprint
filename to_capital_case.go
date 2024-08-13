@@ -2,21 +2,22 @@ package sprint
 
 func ToCapitalCase(s string) string {
 	sRuneArray := []rune(s)
+	isFirstLetter := true
 	for i, v := range sRuneArray {
-		if i == 0 {
-			if v >= 'a' && v <= 'z' {
-				sRuneArray[i] -= 32
-			}
-		} /* else if !(sRuneArray[i-1] == ' ') && !(sRuneArray[i-1] == '-') {
+		if isFirstLetter {
 			if v >= 'A' && v <= 'Z' {
-				sRuneArray[i] += 32
+				isFirstLetter = false
+			} else if v >= 'a' && v <= 'z' {
+				sRuneArray[i] -= 32
+				isFirstLetter = false
 			}
-		} */
-		if v == ' ' || v == '-' {
-			if i != len(sRuneArray)-1 {
-				if sRuneArray[i+1] >= 'a' && sRuneArray[i+1] <= 'z' {
-					sRuneArray[i+1] -= 32
-				}
+		} else {
+			if v >= 'a' && v <= 'z' {
+				continue
+			} else if v >= 'A' && v <= 'Z' {
+				sRuneArray[i] += 32
+			} else {
+				isFirstLetter = true
 			}
 		}
 
