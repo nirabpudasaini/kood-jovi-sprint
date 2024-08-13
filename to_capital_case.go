@@ -7,6 +7,10 @@ func ToCapitalCase(s string) string {
 			if v >= 'a' && v <= 'z' {
 				sRuneArray[i] -= 32
 			}
+		} else if !(sRuneArray[i-1] == ' ') || !(sRuneArray[i-1] == '-') {
+			if v >= 'A' && v <= 'Z' {
+				sRuneArray[i] += 32
+			}
 		}
 		if v == ' ' || v == '-' {
 			if i != len(sRuneArray)-1 {
@@ -15,6 +19,7 @@ func ToCapitalCase(s string) string {
 				}
 			}
 		}
+
 	}
 	return string(sRuneArray)
 }
