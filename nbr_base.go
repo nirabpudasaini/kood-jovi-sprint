@@ -8,7 +8,7 @@ func NbrBase(n int, base string) string {
 		isNegative = true
 		n *= -1
 	}
-	if ValidBase(base) {
+	if BaseValidation(base) {
 		for n >= baseNum {
 			result = string(base[n%baseNum]) + result
 			n /= baseNum
@@ -23,7 +23,7 @@ func NbrBase(n int, base string) string {
 	return result
 }
 
-func ValidBase(base string) bool {
+func BaseValidation(base string) bool {
 	if len([]rune(base)) < 2 {
 		return false
 	}
