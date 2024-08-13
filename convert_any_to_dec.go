@@ -18,3 +18,20 @@ func ConvertAnyToDec(s, base string) int {
 	}
 	return result
 }
+
+func BaseValidation(base string) bool {
+	if len([]rune(base)) < 2 {
+		return false
+	}
+	countMap := make(map[string]int)
+	for _, v := range []byte(base) {
+		countMap[string(v)] = countMap[string(v)] + 1
+		if countMap[string(v)] > 1 {
+			return false
+		}
+		if v == '-' || v == '+' {
+			return false
+		}
+	}
+	return true
+}
