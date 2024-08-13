@@ -8,7 +8,7 @@ func StrConcatWith(strs []string, sep string) string {
 			result += v
 			break
 		}
-		result = result + v + sep + " "
+		result = result + v + sep
 	}
 	return result
 }
