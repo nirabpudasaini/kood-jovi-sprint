@@ -33,6 +33,9 @@ func ValidBase(base string) bool {
 		if countMap[string(v)] > 1 {
 			return false
 		}
+		if v == '-' || v == '+' {
+			return false
+		}
 	}
 	return true
 }
