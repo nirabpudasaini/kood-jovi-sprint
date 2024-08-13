@@ -7,6 +7,13 @@ func StrSplitBy(s, sep string) []string {
 	sepLen := len(sepArr)
 	sLen := len(sArr)
 	word := ""
+	if s == "" || sep == "" {
+		return result
+	}
+	if s == sep {
+		result = append(result, sep)
+		return result
+	}
 
 	for i := 0; i < len(sArr); i++ {
 		if s[i] == sep[0] {
