@@ -1,6 +1,9 @@
 package sprint
 
 func NextPrime(n int) int {
+	if n == 0 {
+		return 2
+	}
 	if isPrime(n) {
 		return n
 	}
