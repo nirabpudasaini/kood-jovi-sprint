@@ -1,7 +1,7 @@
 package sprint
 
 import (
-	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -33,7 +33,7 @@ func solve(row int, queens *[8]int, columns *[8]bool, diag1, diag2 *[15]bool, so
 		// Construct the solution string from the queens' positions
 		var solution strings.Builder
 		for i := 0; i < 8; i++ {
-			solution.WriteString(fmt.Sprintf("%d", queens[i]+1))
+			solution.WriteString(strconv.Itoa(queens[i] + 1))
 		}
 		*solutions = append(*solutions, solution.String())
 		return
