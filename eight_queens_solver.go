@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func EightQueenSolver() string {
+func EightQueensSolver() string {
 	var solutions []string
 	var result strings.Builder
 
