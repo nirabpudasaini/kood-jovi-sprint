@@ -19,9 +19,11 @@ func EightQueensSolver() string {
 	solve(0, &queens, &columns, &diag1, &diag2, &solutions)
 
 	// Combine all solutions into the final output string
-	for _, solution := range solutions {
+	for i, solution := range solutions {
 		result.WriteString(solution)
-		result.WriteString("\n")
+		if i < len(solutions)-1 {
+			result.WriteString("\n")
+		}
 	}
 
 	return result.String()
