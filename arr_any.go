@@ -18,7 +18,7 @@ func IsUpper(s string) bool {
 	return true
 }
 
-func IsAlphaumeric(s string) bool {
+func IsAlphanumeric(s string) bool {
 	for _, v := range s {
 		if !((v >= 'a' && v <= 'z') || (v >= 'A' && v <= 'Z') || (v >= '0' && v <= '9')) {
 			return false
