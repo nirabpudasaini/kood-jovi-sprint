@@ -9,7 +9,7 @@ func ArrMap(f func(int) bool, a []int) []bool {
 }
 
 func IsPrime(n int) bool {
-	if n == 1 {
+	if n <= 1 {
 		return false
 	}
 	if n%2 == 0 {
