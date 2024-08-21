@@ -3,6 +3,9 @@ package sprint
 import "fmt"
 
 func StrCompress(s string) string {
+	if s == "" {
+		return ""
+	}
 	lastLetter := s[0]
 	consucutiveCount := 1
 	result := ""
