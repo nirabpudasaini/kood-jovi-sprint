@@ -12,7 +12,7 @@ func Payout(amount int, denominations []int) (payout []int) {
 			}
 		}
 	}
-	return sortDescending(payout)
+	return payout
 }
 
 func sortDescending(arr []int) []int {
