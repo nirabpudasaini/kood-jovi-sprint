@@ -11,8 +11,12 @@ func FromRoman(s string) int {
 		"M": 1000,
 	}
 	result := 0
-	for _, v := range s {
-		result = result + numMap[string(v)]
+	for i := 0; i < len(s)-1; i++ {
+		if numMap[string(s[i])] >= numMap[string(s[i+1])] {
+			result = result + numMap[string(s[i])]
+		} else {
+			result = result - numMap[string(s[i])]
+		}
 	}
 
 	return result
