@@ -18,6 +18,7 @@ func FromRoman(s string) int {
 			result = result - numMap[string(s[i])]
 		}
 	}
+	result = result + numMap[string(s[len(s)-1])]
 
 	return result
 }
