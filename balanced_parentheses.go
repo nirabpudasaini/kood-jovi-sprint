@@ -12,16 +12,31 @@ func BalancedParentheses(input string) bool {
 		case "[":
 			parStack = append(parStack, "[")
 		case ")":
+			if lastIndex < 0 {
+				return false
+			}
 			if parStack[lastIndex] == "(" {
 				parStack = parStack[:lastIndex]
+			} else {
+				return false
 			}
 		case "}":
+			if lastIndex < 0 {
+				return false
+			}
 			if parStack[lastIndex] == "{" {
 				parStack = parStack[:lastIndex]
+			} else {
+				return false
 			}
 		case "]":
+			if lastIndex < 0 {
+				return false
+			}
 			if parStack[lastIndex] == "[" {
 				parStack = parStack[:lastIndex]
+			} else {
+				return false
 			}
 		}
 	}
