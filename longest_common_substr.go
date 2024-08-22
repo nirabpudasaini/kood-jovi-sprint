@@ -16,9 +16,7 @@ func LongestCommonSubstr(str1, str2 string) string {
 					maxI = i
 				}
 			}
-
 		}
 	}
-
 	return str1[maxI-max : maxI]
 }
